@@ -13,6 +13,7 @@
 		1E6A384E2AF72A8C00AC85B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6A384D2AF72A8C00AC85B2 /* Assets.xcassets */; };
 		1E6A38512AF72A8C00AC85B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6A38502AF72A8C00AC85B2 /* Preview Assets.xcassets */; };
 		1E6A38582AF731A200AC85B2 /* DailyGratitudeCarouselCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A38572AF731A200AC85B2 /* DailyGratitudeCarouselCardView.swift */; };
+		1E6A385A2AF77DFC00AC85B2 /* JournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A38592AF77DFC00AC85B2 /* JournalDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		1E6A384D2AF72A8C00AC85B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E6A38502AF72A8C00AC85B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E6A38572AF731A200AC85B2 /* DailyGratitudeCarouselCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGratitudeCarouselCardView.swift; sourceTree = "<group>"; };
+		1E6A38592AF77DFC00AC85B2 /* JournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				1E6A384D2AF72A8C00AC85B2 /* Assets.xcassets */,
 				1E6A384F2AF72A8C00AC85B2 /* Preview Content */,
 				1E6A38572AF731A200AC85B2 /* DailyGratitudeCarouselCardView.swift */,
+				1E6A38592AF77DFC00AC85B2 /* JournalDetailView.swift */,
 			);
 			path = DailyGratitude;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E6A384A2AF72A8A00AC85B2 /* ContentView.swift in Sources */,
+				1E6A385A2AF77DFC00AC85B2 /* JournalDetailView.swift in Sources */,
 				1E6A384C2AF72A8A00AC85B2 /* Item.swift in Sources */,
 				1E6A38582AF731A200AC85B2 /* DailyGratitudeCarouselCardView.swift in Sources */,
 				1E6A38482AF72A8A00AC85B2 /* DailyGratitudeApp.swift in Sources */,

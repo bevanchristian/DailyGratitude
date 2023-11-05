@@ -24,7 +24,7 @@ struct ContentView: View {
         FilterDataSelectionOption(name: "Old to New", selected: true),
         FilterDataSelectionOption(name: "New to Old", selected: false)
     ]
-
+    
     @State private var showFilter = false
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
@@ -68,8 +68,8 @@ struct ContentView: View {
                         .frame(minHeight: 150, maxHeight: geometry.size.height * 0.3)
                         .padding()
                         VStack(content: {
-                            Button {
-                                print("create journal")
+                            NavigationLink {
+                                JournalDetailView()
                             } label: {
                                 HStack(content: {
                                     Image(systemName: "plus.circle")
@@ -85,9 +85,6 @@ struct ContentView: View {
                                 .border(Color.gray, width: 2)
                                 .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
                                 .shadow(radius: 10)
-                                
-                                
-                                
                             }
                         })
                         HStack(alignment: .center, content: {
@@ -120,7 +117,7 @@ struct ContentView: View {
                                                 if let index = filterArray.firstIndex(where: { $0.name == text.name }) {
                                                     filterArray[index].selected = true
                                                 }
-
+                                                
                                             } label: {
                                                 HStack {
                                                     Text(text.name)
@@ -130,7 +127,7 @@ struct ContentView: View {
                                                     }
                                                 }
                                             }
-
+                                            
                                         }
                                         .listStyle(.plain)
                                         .padding(.horizontal, 5)
@@ -145,13 +142,16 @@ struct ContentView: View {
                         .padding()
                         LazyVGrid(columns: columns, content: {
                             ForEach(1...10, id: \.self) { count in
-                                DailyGratitudeCarouselCardView(imageAsset: .constant("fire"), description: .constant("Daily Dose \(count)"))
-                                    .scrollTransition { effect, phase in
-                                        effect
-                                            .scaleEffect(phase.isIdentity ? 1: 0.3)
-                                            .blur(radius: phase.isIdentity ? 0: 10)
-                                            .opacity(phase.isIdentity ? 1 : 0.01)
-                                    }
+                                NavigationLink {
+                                    JournalDetailView()
+                                } label: {
+                                    DailyGratitudeCarouselCardView(imageAsset: .constant("fire"), description: .constant("Daily Dose \(count)"))
+                                        .scrollTransition { effect, phase in
+                                            effect
+                                                .scaleEffect(phase.isIdentity ? 1: 0.3)
+                                        }
+                                }
+                                
                             }
                         })
                         
