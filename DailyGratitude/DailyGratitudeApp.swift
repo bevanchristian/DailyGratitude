@@ -31,7 +31,7 @@ struct DailyGratitudeApp: App {
                     .tabItem {
                         Label("Home", systemImage: "tray.and.arrow.down.fill")
                     }
-                ContentView()
+                SettingView()
                     .badge(2)
                     .tabItem {
                         Label("Setting", systemImage: "tray.and.arrow.down.fill")

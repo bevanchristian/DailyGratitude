@@ -14,6 +14,7 @@
 		1E6A38512AF72A8C00AC85B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6A38502AF72A8C00AC85B2 /* Preview Assets.xcassets */; };
 		1E6A38582AF731A200AC85B2 /* DailyGratitudeCarouselCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A38572AF731A200AC85B2 /* DailyGratitudeCarouselCardView.swift */; };
 		1E6A385A2AF77DFC00AC85B2 /* JournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A38592AF77DFC00AC85B2 /* JournalDetailView.swift */; };
+		1E6A385C2AF7B8E500AC85B2 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6A385B2AF7B8E500AC85B2 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		1E6A38502AF72A8C00AC85B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E6A38572AF731A200AC85B2 /* DailyGratitudeCarouselCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGratitudeCarouselCardView.swift; sourceTree = "<group>"; };
 		1E6A38592AF77DFC00AC85B2 /* JournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailView.swift; sourceTree = "<group>"; };
+		1E6A385B2AF7B8E500AC85B2 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				1E6A384F2AF72A8C00AC85B2 /* Preview Content */,
 				1E6A38572AF731A200AC85B2 /* DailyGratitudeCarouselCardView.swift */,
 				1E6A38592AF77DFC00AC85B2 /* JournalDetailView.swift */,
+				1E6A385B2AF7B8E500AC85B2 /* SettingView.swift */,
 			);
 			path = DailyGratitude;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				1E6A384A2AF72A8A00AC85B2 /* ContentView.swift in Sources */,
 				1E6A385A2AF77DFC00AC85B2 /* JournalDetailView.swift in Sources */,
 				1E6A384C2AF72A8A00AC85B2 /* Item.swift in Sources */,
+				1E6A385C2AF7B8E500AC85B2 /* SettingView.swift in Sources */,
 				1E6A38582AF731A200AC85B2 /* DailyGratitudeCarouselCardView.swift in Sources */,
 				1E6A38482AF72A8A00AC85B2 /* DailyGratitudeApp.swift in Sources */,
 			);
