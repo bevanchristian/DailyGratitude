@@ -25,7 +25,18 @@ struct DailyGratitudeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView(selection: .constant(1)) {
+                ContentView()
+                    .badge(1)
+                    .tabItem {
+                        Label("Home", systemImage: "tray.and.arrow.down.fill")
+                    }
+                ContentView()
+                    .badge(2)
+                    .tabItem {
+                        Label("Setting", systemImage: "tray.and.arrow.down.fill")
+                    }
+            }
         }
         .modelContainer(sharedModelContainer)
     }

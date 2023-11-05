@@ -37,19 +37,17 @@ struct ContentView: View {
                             .font(.title)
                             .fontWeight(.black)
                         Spacer()
-                        Button {
-                            print("Filter")
-                        } label: {
-                            HStack(content: {
-                                Image(systemName: "gear")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                            })
-                            .foregroundStyle(.black)
-                        }
                     }
                     .padding()
                     VStack(content: {
+                        HStack {
+                            Text("Daily Verse")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                            .fontDesign(.rounded)
+                            Spacer()
+                        }
+                        .padding(.horizontal)
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack(alignment: .center, spacing: 50, content: {
                                 ForEach(1...10, id: \.self) { count in
@@ -88,7 +86,7 @@ struct ContentView: View {
                             }
                         })
                         HStack(alignment: .center, content: {
-                            Text("History")
+                            Text("Journal History")
                                 .font(.headline)
                                 .fontWeight(.bold)
                                 .fontDesign(.rounded)
