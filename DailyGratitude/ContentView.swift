@@ -8,12 +8,24 @@
 import SwiftUI
 import SwiftData
 
+struct FilterDataSelectionOption: Identifiable, Hashable {
+    let id: String = UUID().uuidString
+    let name: String
+    var selected: Bool
+}
+
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
     
     @State private var searchText = ""
     @State private var searchIsActive = false
+    @State private var filterArray: [FilterDataSelectionOption] = [
+        FilterDataSelectionOption(name: "Old to New", selected: true),
+        FilterDataSelectionOption(name: "New to Old", selected: false)
+    ]
+
+    @State private var showFilter = false
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
@@ -84,7 +96,7 @@ struct ContentView: View {
                                 .fontWeight(.bold)
                                 .fontDesign(.rounded)
                             Button {
-                                print("Filter")
+                                showFilter.toggle()
                             } label: {
                                 HStack(content: {
                                     Image(systemName: "line.horizontal.3.decrease.circle")
@@ -92,7 +104,41 @@ struct ContentView: View {
                                         .frame(width: 20, height: 20)
                                 })
                                 .foregroundStyle(.black)
-                            }
+                            }.popover(
+                                isPresented: $showFilter,
+                                attachmentAnchor: .point(.trailing),
+                                arrowEdge: .trailing,
+                                content: {
+                                    VStack {
+                                        List(filterArray) { text in
+                                            Button {
+                                                filterArray = filterArray.map { element in
+                                                    var modifiedElement = element
+                                                    modifiedElement.selected = false
+                                                    return modifiedElement
+                                                }
+                                                if let index = filterArray.firstIndex(where: { $0.name == text.name }) {
+                                                    filterArray[index].selected = true
+                                                }
+
+                                            } label: {
+                                                HStack {
+                                                    Text(text.name)
+                                                    Spacer()
+                                                    if text.selected {
+                                                        Image(systemName: "checkmark.circle.fill")
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                        .listStyle(.plain)
+                                        .padding(.horizontal, 5)
+                                    }
+                                    .frame(width: 200, height: 200)
+                                    .presentationCompactAdaptation(.popover)
+                                    
+                                })
                             
                             Spacer()
                         })
